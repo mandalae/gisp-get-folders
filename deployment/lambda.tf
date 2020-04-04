@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 resource "aws_lambda_permission" "GPCovidResponse-getFolders" {
-  statement_id  = "AllowExecutionFromAPIGateway"
   action        = "lambda:InvokeFunction"
   function_name = "${aws_lambda_function.GPCovidResponse-getFolders.function_name}"
   principal     = "apigateway.amazonaws.com"
